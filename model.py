@@ -1,17 +1,6 @@
-import warnings
-warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split 
-from sklearn.metrics import accuracy_score 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, classification_report, roc_auc_score, roc_curve, f1_score, accuracy_score, recall_score, precision_score
-from sklearn.ensemble import AdaBoostClassifier, GradientBoostingClassifier
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.manifold import TSNE
-import matplotlib.patches as mpatches
+import sklearn
 import pickle
 
 df_data = pd.read_csv("adult.csv")
