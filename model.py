@@ -41,10 +41,10 @@ Y = df_data['income']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.3, random_state = 100)
 
-gbc = GradientBoostingClassifier(n_estimators=100, random_state=0)
-gbc.fit(X_train, y_train)
-ypred = gbc.predict(X_test)
+rf = RandomForestClassifier(n_estimators=100, random_state=0)
+rf.fit(X_train, y_train)
+ypred = rf.predict(X_test)
 
 pickle_out = open("model.pkl", "wb")
-pickle.dump(gbc, pickle_out)
+pickle.dump(rf, pickle_out)
 pickle_out.close()
